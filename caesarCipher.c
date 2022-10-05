@@ -15,7 +15,7 @@ int main(void)
     char inp, shifted_inp, input_message[ARR_LEN] = {}, output_message[ARR_LEN] = {};
     int shift;
 
-    /* stores each char of input message into an arary */
+    /* stores each char of input message into an array */
     printf("Enter a message to be encrypted: ");
     for (int i = 0; (inp = getchar()) != '\n'; i++)
     {
