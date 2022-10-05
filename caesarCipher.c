@@ -31,17 +31,17 @@ int main(void)
     {
         shifted_inp = input_message[i] + shift; // initialize shifted input
 
-        if (97 <= input_message[i] &&input_message[i] <= 122) // if the original input is lowercase
+        if (97 <= input_message[i] && input_message[i] <= 122) // if the original input is lowercase
         {
-            (shifted_inp > 122) ? (output_message[i] = shifted_inp - 26)
+            (shifted_inp > 122U) ? (output_message[i] = shifted_inp - 26)
+                                 : (output_message[i] = shifted_inp);
+        }
+        else if (65 <= input_message[i] && input_message[i] <= 90) // if the original input is uppercase
+        {
+            (shifted_inp > 90U) ? (output_message[i] = shifted_inp - 26)
                                 : (output_message[i] = shifted_inp);
         }
-        else if (65 <= input_message[i] &&input_message[i] <= 90) // if the original input is uppercase
-        {
-            (shifted_inp > 90) ? (output_message[i] = shifted_inp - 26)
-                                : (output_message[i] = shifted_inp);
-        }
-        else
+        else // else puts the non-letter character without any changse
         {
             output_message[i] = input_message[i];
         }
